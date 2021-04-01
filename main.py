@@ -4,7 +4,6 @@ import re
 class FixPhoneBook:
     def __init__(self, file_path):
         with open(file_path, 'r', encoding="utf8") as f:
-            #self.raw_phone_book = list(csv.reader(f, delimiter=","))
             self.raw_phone_book = f.readlines()
 
     def fix_it(self, save_path):
