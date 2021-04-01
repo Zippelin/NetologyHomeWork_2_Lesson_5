@@ -27,6 +27,8 @@ class FixPhoneBook:
                     phone_book_dicts_list[fixed_string[0] + fixed_string[1]]['phone'] = fixed_string[5]
                 if not phone_book_dicts_list[fixed_string[0] + fixed_string[1]]['position']:
                     phone_book_dicts_list[fixed_string[0] + fixed_string[1]]['position'] = fixed_string[4]
+                if not phone_book_dicts_list[fixed_string[0] + fixed_string[1]]['surname']:
+                    phone_book_dicts_list[fixed_string[0] + fixed_string[1]]['surname'] = fixed_string[2]
             else:
                 phone_book_dicts_list[fixed_string[0] + fixed_string[1]] = dict(zip(header, fixed_string))
         phone_book_dicts_list = list(phone_book_dicts_list.values())
